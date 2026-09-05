@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphercode — AI Coding Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">C</div>
+                <div>
+                    <h1>Ciphercode</h1>
+                    <span>by Cipher AI</span>
+                </div>
+            </div>
+
+            <button class="new-chat" id="newChat">
+                <span>＋</span> New chat
+            </button>
+
+            <div class="history">
+                <p class="history-title">Recent chats</p>
+                <div id="historyList"></div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <button class="side-button">⚙ Settings</button>
+                <button class="side-button">ⓘ About Ciphercode</button>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+                <button class="mobile-menu" id="mobileMenu">☰</button>
+
+                <div>
+                    <strong>Ciphercode</strong>
+                    <span class="status">
+                        <i></i> Online
+                    </span>
+                </div>
+            </header>
+
+            <section class="chat" id="chat">
+
+                <div class="welcome" id="welcome">
+
+                    <div class="big-logo">C</div>
+
+                    <h2>What are you building?</h2>
+
+                    <p>
+                        Ask Ciphercode about programming,
+                        debugging, architecture, APIs and more.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button data-prompt="Help me build a Python application">
+                            🐍 Build with Python
+                        </button>
+
+                        <button data-prompt="Debug my JavaScript code">
+                            🐞 Debug JavaScript
+                        </button>
+
+                        <button data-prompt="Explain this programming concept">
+                            💡 Explain code
+                        </button>
+
+                        <button data-prompt="Help me design an API">
+                            🔌 Design an API
+                        </button>
+
+                    </div>
+                </div>
+
+                <div id="messages"></div>
+
+            </section>
+
+            <div class="composer-wrapper">
+
+                <div class="composer">
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        placeholder="Message Ciphercode..."
+                    ></textarea>
+
+                    <div class="composer-bottom">
+
+                        <span class="hint">
+                            Enter to send · Shift + Enter for new line
+                        </span>
+
+                        <button id="sendButton" class="send-button">
+                            ↑
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="disclaimer">
+                    Ciphercode can make mistakes. Check important code before using it.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
